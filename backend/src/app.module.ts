@@ -7,7 +7,7 @@ import { EventEmitterModule } from '@nestjs/event-emitter';
 import { ThrottlerModule } from '@nestjs/throttler';
 import { WinstonModule } from 'nest-winston';
 import * as winston from 'winston';
-
+import { ScheduleModule } from '@nestjs/schedule';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { SmsModule } from './sms/sms.module';
@@ -72,5 +72,7 @@ import { MonitoringModule } from './monitoring/monitoring.module';
     TelephonyModule,
     MonitoringModule,
   ],
+  ScheduleModule.forRoot(),
+
 })
 export class AppModule {}
